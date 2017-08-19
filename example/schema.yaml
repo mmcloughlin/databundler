@@ -1,0 +1,19 @@
+name: Peak
+doc: Peak represents a mountain.
+collection_doc: Peaks is the Messner version of the Seven Summits.
+fields:
+  - name: Name
+    type: string
+  - name: Elevation
+    doc: Elevation in meters.
+    type: int
+  - null # ignore Prominence
+  - name: Continent
+    type: string
+  - name: Range
+    doc: Name of mountain range.
+    type: string
+  - name: Country
+    type: string
+  - name: FirstAscentYear
+    type: int
