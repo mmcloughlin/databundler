@@ -3,7 +3,7 @@ go:
   - 1.8.x
   - tip
 install:
-  - go install
+  - go get .
 script:
   - cd example
   - bash build.sh
