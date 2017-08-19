@@ -3,7 +3,9 @@ go:
   - 1.8.x
   - tip
 install:
-  - go get .
+  - go get -v .
 script:
   - cd example
-  - bash build.sh
+  - cp sevensummits.go expect.go
+  - bash -ex build.sh
+  - cmp sevensummits.go expect.go
