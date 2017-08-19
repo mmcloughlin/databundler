@@ -1,0 +1,36 @@
+# databundler
+
+Embed CSV data as a Golang package.
+
+## Install
+
+```
+go get github.com/mmcloughlin/databundler
+```
+
+## Example
+
+We'll use the [Seven Summits](https://en.wikipedia.org/wiki/Seven_Summits) as
+our [example](example). The CSV we are going to embed into a package looks like
+
+```
+{% include 'example/sevensummits.csv' %}
+```
+
+We specify a *schema* in YAML format.
+
+```yaml
+{% include 'example/schema.yaml' %}
+```
+
+Build the Go source with the following commands.
+
+```sh
+{% include 'example/build.sh' %}
+```
+
+Resulting in the following code.
+
+```go
+{% include 'example/sevensummits.go' %}
+```
