@@ -1,0 +1,9 @@
+language: go
+go:
+  - 1.8.x
+  - tip
+install:
+  - go install
+script:
+  - cd example
+  - bash build.sh
