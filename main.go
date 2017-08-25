@@ -10,6 +10,8 @@ import (
 	"os"
 	"strconv"
 
+	"github.com/gedex/inflector"
+
 	yaml "gopkg.in/yaml.v2"
 )
 
@@ -72,7 +74,7 @@ func Output(pkg string, w io.Writer, s *Schema, r io.Reader) error {
 	if s.CollectionDoc != "" {
 		fmt.Fprintf(w, "// %s\n", s.CollectionDoc)
 	}
-	fmt.Fprintf(w, "var %ss = []%s{\n", s.Name, s.Name)
+	fmt.Fprintf(w, "var %s = []%s{\n", inflector.Pluralize(s.Name), s.Name)
 	c := csv.NewReader(r)
 	for {
 		record, err := c.Read()
