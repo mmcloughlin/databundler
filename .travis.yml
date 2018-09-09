@@ -1,14 +1,15 @@
 language: go
 go:
-  - 1.5.x
-  - 1.6.x
-  - 1.7.x
-  - 1.8.x
-  - tip
+- 1.x
+- 1.7.x
+- 1.8.x
+- 1.9.x
+- 1.10.x
+- 1.11.x
 install:
-  - go get -v .
+- go get -v .
 script:
-  - cd example
-  - cp sevensummits.go expect.go
-  - bash -ex build.sh
-  - cmp sevensummits.go expect.go
+- cd example
+- cp sevensummits.go expect.go
+- bash -ex build.sh
+- cmp sevensummits.go expect.go
